@@ -8,18 +8,18 @@ Features has to implement
 
 #Email sending
 
-Login
-
-File uploading images
+#File uploading images
 
 #Simple CRUD operations
 
+#Download data as CSV file
+
+#Upload data as CSV file
+
 Load thousands of records along with pagination
 
-Download data as excel file
-
-Upload data as CSV or Excel file
-
 Visualizations
+
+#Login
 
 Token authentication uisng JWT or third party

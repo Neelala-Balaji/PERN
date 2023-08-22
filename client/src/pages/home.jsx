@@ -6,6 +6,8 @@ import Header from "../shared/header";
 import Footer from "../shared/footer";
 import NewsLetter from "../components/newsletter";
 import Fileupload from "../components/fileupload";
+import CsvUpload from "../components/csvupload ";
+import CustomTable from "../components/table";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -86,7 +88,7 @@ const Home = () => {
   return (
     <>
       <Box>
-        <Grid container spacing={2}>
+        <Grid container spacing={3}>
           <Grid item xs={12}>
             <Header />
           </Grid>
@@ -159,6 +161,15 @@ const Home = () => {
                 </li>
               ))}
             </ul>
+          </Grid>
+          <Grid className="display" item xs={6}>
+            <CsvUpload />
+          </Grid>
+          <Grid container justifyContent="center" style={{ marginTop: "20px" }}>
+            <Grid item xs={9}>
+              <h2>Table with pagination</h2>
+              <CustomTable />
+            </Grid>
           </Grid>
           <Grid className="display" item xs={12}>
             <Footer />

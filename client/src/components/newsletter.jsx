@@ -25,7 +25,7 @@ export default function NewsLetter() {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <h1>News Letter</h1>
+      <h2>News Letter</h2>
       <div className="formcss">
         <input
           type="text"
