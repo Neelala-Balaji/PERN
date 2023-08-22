@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Box from "@mui/material/Box";
+import PropTypes from "prop-types";
 import Grid from "@mui/material/Grid";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import axios from "axios";
 import Header from "../shared/header";
 import Footer from "../shared/footer";
@@ -8,6 +12,39 @@ import NewsLetter from "../components/newsletter";
 import Fileupload from "../components/fileupload";
 import CsvUpload from "../components/csvupload ";
 import CustomTable from "../components/table";
+
+function CustomTabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+CustomTabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -17,6 +54,11 @@ const Home = () => {
     password: "",
   });
   const [isAdd, setIsAdd] = useState(false);
+  const [value, setValue] = React.useState("1");
+
+  const handleTabChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -87,11 +129,34 @@ const Home = () => {
 
   return (
     <>
-      <Box>
+      <Box sx={{ width: "100%" }}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Header />
           </Grid>
+          <Grid item xs={12}>
+            <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+              <Tabs
+                value={value}
+                onChange={handleTabChange}
+                aria-label="basic tabs example"
+              >
+                <Tab label="Item One" {...a11yProps(0)} />
+                <Tab label="Item Two" {...a11yProps(1)} />
+                <Tab label="Item Three" {...a11yProps(2)} />
+              </Tabs>
+            </Box>
+          </Grid>
+
+          <CustomTabPanel value={value} index={0}>
+            Item One
+          </CustomTabPanel>
+          <CustomTabPanel value={value} index={1}>
+            Item Two
+          </CustomTabPanel>
+          <CustomTabPanel value={value} index={2}>
+            Item Three
+          </CustomTabPanel>
           <Grid className="display" item xs={6}>
             <NewsLetter />
           </Grid>
