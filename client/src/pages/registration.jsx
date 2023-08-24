@@ -10,11 +10,6 @@ const Registration = () => {
     password: "",
   });
   const [isAdd, setIsAdd] = useState(false);
-  const [value, setValue] = React.useState("1");
-
-  const handleTabChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
