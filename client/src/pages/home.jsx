@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import Grid from "@mui/material/Grid";
 import Tabs from "@mui/material/Tabs";
@@ -13,6 +13,7 @@ import CsvUpload from "../components/csvupload ";
 import CustomTable from "../components/table";
 import CsvDownload from "../components/csvdownload";
 import Registration from "./registration";
+import Login from "../components/login";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -25,11 +26,7 @@ function CustomTabPanel(props) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
     </div>
   );
 }
@@ -100,7 +97,8 @@ const Home = () => {
                 <Registration />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={6}>
-                Visualizations
+                {/* <Login /> */}
+                Visualisations
               </CustomTabPanel>
             </Grid>
           </Grid>

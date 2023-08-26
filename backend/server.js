@@ -36,6 +36,7 @@ const sendNewsletterRoute = require("./routes/newsletter");
 const fileUploadRoute = require("./routes/fileupload");
 const csvUploadRoute = require("./routes/csvupload");
 const csvDownloadRoute = require("./routes/csvdownload");
+const stateRoute = require("./routes/states");
 
 // Use the route handlers for the respective routes
 app.use("/api/insertusers", postsRoute);
@@ -53,6 +54,8 @@ app.use("/api/fileUpload", fileUploadRoute);
 app.use("/api/csvupload", csvUploadRoute);
 
 app.use("/api/csvdownload", csvDownloadRoute);
+
+app.use("/api/states", stateRoute);
 
 // Start the server
 app.listen(port, () => {

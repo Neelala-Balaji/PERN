@@ -131,3 +131,7 @@ li {
   display: inline-block;
   margin: 1.4em 1em 1em 1em;
 }
+
+.h-50 {
+  height: 60vh;
+}

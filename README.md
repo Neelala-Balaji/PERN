@@ -23,3 +23,11 @@ Visualizations
 #Login
 
 Token authentication uisng JWT or third party
+
+Error handling
+
+Blocklist Ip address
+
+Routing in react and node proper or basic implementation
+
+Code refactoring or best standards
