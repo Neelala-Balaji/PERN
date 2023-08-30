@@ -1,5 +1,6 @@
 import React from "react";
 import Login from "../components/login";
+import Registration from "../pages/registration";
 
 const Header = () => {
   return (
@@ -22,9 +23,8 @@ const Header = () => {
           </li>
 
           <li>
-            <a href="#">Register</a>
+            <Registration />
           </li>
-
           <li>
             <Login />
           </li>

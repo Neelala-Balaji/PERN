@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Grid from "@mui/material/Grid";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Header from "../shared/header";
 import Footer from "../shared/footer";
@@ -12,8 +11,7 @@ import Fileupload from "../components/fileupload";
 import CsvUpload from "../components/csvupload ";
 import CustomTable from "../components/table";
 import CsvDownload from "../components/csvdownload";
-import Registration from "./registration";
-import Login from "../components/login";
+import Users from "./users";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -94,10 +92,9 @@ const Home = () => {
                 <CustomTable />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={5}>
-                <Registration />
+                <Users />
               </CustomTabPanel>
               <CustomTabPanel value={value} index={6}>
-                {/* <Login /> */}
                 Visualisations
               </CustomTabPanel>
             </Grid>
