@@ -153,7 +153,7 @@ export default function CustomTable() {
         }}
         onPageChange={handleChangePage}
         onRowsPerPageChange={handleChangeRowsPerPage}
-        // ActionsComponent={TablePaginationActions}
+        ActionsComponent={TablePaginationActions}
       />
     </div>
   );

@@ -135,3 +135,11 @@ li {
 .h-50 {
   height: 60vh;
 }
+
+.h-80 {
+  height: 80vh;
+}
+
+.text-center {
+  text-align: center;
+}

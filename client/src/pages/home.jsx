@@ -4,8 +4,6 @@ import Grid from "@mui/material/Grid";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import Header from "../shared/header";
-import Footer from "../shared/footer";
 import NewsLetter from "../components/newsletter";
 import Fileupload from "../components/fileupload";
 import CsvUpload from "../components/csvupload ";
@@ -53,10 +51,6 @@ const Home = () => {
     <>
       <Box sx={{ width: "100%" }}>
         <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <Header />
-          </Grid>
-
           <Grid item xs={12} height={"80vh"}>
             <Grid item xs={12}>
               <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -70,7 +64,7 @@ const Home = () => {
                   <Tab label="Export CSV" {...a11yProps(2)} />
                   <Tab label="Download CSV" {...a11yProps(3)} />
                   <Tab label="Pagination with Table" {...a11yProps(4)} />
-                  <Tab label="CRUD Operations" {...a11yProps(5)} />
+                  <Tab label="User Management" {...a11yProps(5)} />
                   <Tab label="Visualizations" {...a11yProps(6)} />
                 </Tabs>
               </Box>
@@ -98,10 +92,6 @@ const Home = () => {
                 Visualisations
               </CustomTabPanel>
             </Grid>
-          </Grid>
-
-          <Grid className="display" item xs={12}>
-            <Footer />
           </Grid>
         </Grid>
       </Box>
