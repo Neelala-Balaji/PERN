@@ -1,6 +1,6 @@
 # Demo
 
-Download source code from github rpository
+Download source code from github repository
 
 Backend Nodejs setup:
 
