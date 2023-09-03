@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
 import BasicModal from "../shared/modal";
 import Button from "@mui/material/Button";
+import { GlobalContext } from "../context";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ const Login = () => {
     password: "",
   });
   const [showLogin, setShowLogin] = useState(false);
+  const { setGlobalState } = useContext(GlobalContext);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -17,12 +19,17 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
     axios
-      .post(`http://localhost:5000/api/authenticate`, formData)
+      .post(`http://localhost:5000/api/login`, formData)
       .then((response) => {
         console.log(response.data);
+        setGlobalState((prevData) => {
+          return { ...prevData, ...response.data, isAuth: true };
+        });
         resetFormData();
+        setShowLogin(false);
+        const token = response.data.token;
+        sessionStorage.setItem("token", token);
       })
       .catch((error) => {
         console.error("Error inserting data:", error);

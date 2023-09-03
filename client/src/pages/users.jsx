@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Grid from "@mui/material/Grid";
 import axios from "axios";
 import BasicModal from "../shared/modal";
+import axiosInstance from "../services/axios";
 
 const Users = () => {
   const [data, setData] = useState([]);
@@ -21,6 +22,7 @@ const Users = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Send the insert query to the backend
+
     axios
       .post(`http://localhost:5000/api/updateusers`, formData)
       .then((response) => {
@@ -40,7 +42,7 @@ const Users = () => {
   }, []);
 
   const loadregisterUsers = () => {
-    axios
+    axiosInstance
       .get("http://localhost:5000/api/getusers")
       .then((response) => {
         setData(response.data);
@@ -126,23 +128,6 @@ const Users = () => {
                 </button>
               )}
             </form>
-          </Grid>
-          <Grid item xs={12}>
-            <h3>Registered users</h3>
-            <ul className="reglist">
-              {data.map((item) => (
-                <li key={item.id} className="list">
-                  {item.username} - {item.email}
-                  <span className="btn" onClick={() => editRow(item)}>
-                    Edit
-                  </span>
-                  <span className="padding">|</span>
-                  <span className="delete" onClick={(e) => deleteRow(e, item)}>
-                    Delete
-                  </span>
-                </li>
-              ))}
-            </ul>
           </Grid>
         </Grid>
       </BasicModal>

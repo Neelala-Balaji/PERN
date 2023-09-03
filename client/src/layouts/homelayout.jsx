@@ -9,7 +9,7 @@ const HomeLayout = () => {
       <div className="h-80">
         <Outlet />
       </div>
-      <div className="text-center">
+      <div className="text-center padding-20">
         <Footer />
       </div>
     </div>

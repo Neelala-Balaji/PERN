@@ -19,8 +19,6 @@ const Registration = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // Send the insert query to the backend
     axios
       .post(`http://localhost:5000/api/insertusers`, formData)
       .then((response) => {

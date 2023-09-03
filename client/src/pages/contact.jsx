@@ -1,13 +1,16 @@
 import React from "react";
-import Box from "@mui/material/Box";
 
 const Contact = () => {
   return (
-    <>
-      <Box sx={{ width: "100%" }}>
-        <h1>Contact us</h1>
-      </Box>
-    </>
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <p>
+        If you have any questions or feedback, please feel free to contact us
+        using the email below.
+      </p>
+
+      <b>pern@gmail.com</b>
+    </div>
   );
 };
 

@@ -1,99 +1,38 @@
 import React from "react";
-import PropTypes from "prop-types";
-import Grid from "@mui/material/Grid";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import NewsLetter from "../components/newsletter";
-import Fileupload from "../components/fileupload";
-import CsvUpload from "../components/csvupload ";
-import CustomTable from "../components/table";
-import CsvDownload from "../components/csvdownload";
-import Users from "./users";
-
-function CustomTabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
-    </div>
-  );
-}
-
-CustomTabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
-
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  const [value, setValue] = React.useState(0);
-
-  const handleTabChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
   return (
     <>
       <Box sx={{ width: "100%" }}>
-        <Grid container spacing={3}>
-          <Grid item xs={12} height={"80vh"}>
-            <Grid item xs={12}>
-              <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-                <Tabs
-                  value={value}
-                  onChange={handleTabChange}
-                  aria-label="basic tabs example"
-                >
-                  <Tab label="News Letter" {...a11yProps(0)} />
-                  <Tab label="File Upload" {...a11yProps(1)} />
-                  <Tab label="Export CSV" {...a11yProps(2)} />
-                  <Tab label="Download CSV" {...a11yProps(3)} />
-                  <Tab label="Pagination with Table" {...a11yProps(4)} />
-                  <Tab label="User Management" {...a11yProps(5)} />
-                  <Tab label="Visualizations" {...a11yProps(6)} />
-                </Tabs>
-              </Box>
-            </Grid>
-            <Grid item xs={12}>
-              <CustomTabPanel value={value} index={0}>
-                <NewsLetter />
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={1}>
-                <Fileupload />
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={2}>
-                <CsvUpload />
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={3}>
-                <CsvDownload />
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={4}>
-                <CustomTable />
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={5}>
-                <Users />
-              </CustomTabPanel>
-              <CustomTabPanel value={value} index={6}>
-                Visualisations
-              </CustomTabPanel>
-            </Grid>
-          </Grid>
-        </Grid>
+        <div class="container">
+          <header>
+            <h1>Welcome to Our Website</h1>
+            <p>Your source for all things amazing!</p>
+          </header>
+          <section class="jumbotron">
+            <h2>Discover Something Great</h2>
+            <p>Explore our collection of incredible content and features.</p>
+            <Link to="/dashboard" className="link">
+              View Dashboard
+            </Link>
+          </section>
+          <section class="jumbotron">
+            <h2>About Us</h2>
+            <p>Learn more about our company and mission.</p>
+            <Link to="/about" className="link">
+              About Us
+            </Link>
+          </section>
+          <section class="jumbotron">
+            <h2>Contact Us</h2>
+            <p>Have questions? We're here to help!</p>
+            <Link to="/contact" className="link">
+              Contact Us
+            </Link>
+          </section>
+        </div>
       </Box>
     </>
   );

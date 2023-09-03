@@ -137,9 +137,30 @@ li {
 }
 
 .h-80 {
-  height: 80vh;
+  min-height: 80vh;
 }
 
 .text-center {
   text-align: center;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.link {
+  color: rgb(25, 118, 210);
+}
+
+.jumbotron {
+  margin-bottom: 30px;
+  box-shadow: 0 0 0 1px #ccc;
+  border-radius: 10px;
+  padding: 20px
+}
+
+.padding-20 {
+  padding: 20px;
 }
