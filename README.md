@@ -22,9 +22,13 @@ create below tables
    state column names
 
    "id"
+
    "state_code"
+
    "state_name"
+
    "district_code"
+
    "district_name"
 
 2. user_registration
@@ -32,8 +36,11 @@ create below tables
    user_registration column names:
 
    "id"
+
    "username"
+
    "email"
+
    "password"
 
 3. user_newsletter
@@ -41,6 +48,7 @@ create below tables
    user_newsletter column names:
 
    "id"
+
    "email"
 
 Demo application using React, Node and Postgres
