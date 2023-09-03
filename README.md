@@ -3,20 +3,24 @@
 Download source code from github rpository
 
 Backend Nodejs setup:
-cd backend
-npm install
-node server.js
+
+1. cd backend
+2. npm install
+3. node server.js
 
 Frontend setup:
-cd client
-npm install
-npm run start
+
+1. cd client
+2. npm install
+3. npm run start
 
 Backend Postgres database setup:
+
 create below tables
 
 1. states
    state column names
+
    "id"
    "state_code"
    "state_name"
@@ -24,14 +28,18 @@ create below tables
    "district_name"
 
 2. user_registration
+
    user_registration column names:
+
    "id"
    "username"
    "email"
    "password"
 
 3. user_newsletter
+
    user_newsletter column names:
+
    "id"
    "email"
 
