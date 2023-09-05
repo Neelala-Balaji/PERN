@@ -25,10 +25,10 @@ pool.connect((err, client, done) => {
 });
 
 // Allow requests only from a specific origin
-const allowedOrigins = ["http://localhost:3000/"];
+const allowedOrigins = ["http://localhost:3000", "http://localhost:3001"];
 
 const corsOptions = {
-  origin: (origin, callback) => {
+  origin: function (origin, callback) {
     if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
       callback(null, true);
     } else {
