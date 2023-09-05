@@ -64,6 +64,8 @@ const Dashboard = () => {
           // Handle authentication errors or other errors
         });
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
