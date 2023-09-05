@@ -25,7 +25,6 @@ const Users = () => {
     axiosInstance
       .post(`/updateusers`, formData)
       .then((response) => {
-        console.log(response.data);
         loadregisterUsers();
         resetFormData();
         // Handle successful response (e.g., show a success message)
@@ -61,7 +60,6 @@ const Users = () => {
     axiosInstance
       .delete(`/deleteusers/${formData.id}`)
       .then((response) => {
-        console.log(response.data);
         loadregisterUsers();
         // Handle successful response (e.g., show a success message)
       })

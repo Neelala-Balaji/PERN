@@ -11,7 +11,6 @@ const dbPool = createDBPool();
 router.post("/", (req, res) => {
   // Implement your logic to fetch users from the database or any other data source
   const { email } = req.body;
-  console.log("req", req);
 
   // Perform the insert query
   try {

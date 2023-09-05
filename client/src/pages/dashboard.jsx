@@ -56,8 +56,6 @@ const Dashboard = () => {
       axiosInstance
         .get(`/protected`)
         .then((response) => {
-          // Handle successful response
-          console.log("validate", response);
           setGlobalState((prevData) => {
             return { ...prevData, ...response.data.user, isAuth: true };
           });

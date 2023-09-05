@@ -6,7 +6,6 @@ const CsvDownload = () => {
     axiosInstance
       .get(`/csvdownload`)
       .then((response) => {
-        console.log(response.data);
         if (response.data?.length) handleDownload(response.data);
         // Handle successful response (e.g., show a success message)
       })

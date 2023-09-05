@@ -21,7 +21,6 @@ router.post("/", (req, res) => {
 
   const values = [username, email, password, id];
 
-  console.log("req", req);
   // Perform the insert query
   try {
     dbPool.query(updateQuery, values, (err, result) => {

@@ -48,8 +48,6 @@ router.post("/", (req, res) => {
           totalRecords: totalRecords,
         };
 
-        console.log("finalresult:", finalresult);
-
         res.json(finalresult);
       });
     });

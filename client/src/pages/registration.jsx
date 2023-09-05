@@ -22,7 +22,6 @@ const Registration = () => {
     axiosInstance
       .post(`/insertusers`, formData)
       .then((response) => {
-        console.log(response.data);
         resetFormData();
         // Handle successful response (e.g., show a success message)
       })

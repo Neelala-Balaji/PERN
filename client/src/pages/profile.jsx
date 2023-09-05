@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { GlobalContext, initialState } from "../context";
+import { GlobalContext } from "../context";
 import { redirect } from "react-router-dom";
 
 const Profile = () => {

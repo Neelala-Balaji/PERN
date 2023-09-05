@@ -22,7 +22,6 @@ const Login = () => {
     axiosInstance
       .post("/login", formData)
       .then((response) => {
-        console.log(response.data);
         setGlobalState((prevData) => {
           return { ...prevData, ...response.data, isAuth: true };
         });
