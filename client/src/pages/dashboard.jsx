@@ -96,7 +96,7 @@ const Dashboard = () => {
                     <Tab label="Download CSV" {...a11yProps(3)} />
                     <Tab label="Pagination with Table" {...a11yProps(4)} />
                     <Tab label="User Management" {...a11yProps(5)} />
-                    <Tab label="Visualizations" {...a11yProps(6)} />
+                    <Tab label="D3 Charts" {...a11yProps(6)} />
                   </Tabs>
                 </Box>
               </Grid>
