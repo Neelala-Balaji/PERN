@@ -28,7 +28,7 @@ pool.connect((err, client, done) => {
 const allowedOrigins = ["http://localhost:3000", "http://localhost:3001"];
 
 const corsOptions = {
-  origin: function (origin, callback) {
+  origin: (origin, callback) => {
     if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
       callback(null, true);
     } else {
@@ -52,6 +52,7 @@ const csvDownloadRoute = require("./routes/csvdownload");
 const stateRoute = require("./routes/states");
 const loginRoute = require("./routes/loginuser");
 const protectedRoute = require("./routes/validtoken");
+const chartData = require("./routes/chart");
 
 // Use the route handlers for the respective routes
 app.use("/insertusers", postsRoute);
@@ -75,6 +76,8 @@ app.use("/states", stateRoute);
 app.use("/login", loginRoute);
 
 app.use("/protected", protectedRoute);
+
+app.use("/chartdata", chartData);
 
 // Start the server
 app.listen(port, () => {

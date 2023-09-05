@@ -10,6 +10,7 @@ import Fileupload from "../components/fileupload";
 import CsvUpload from "../components/csvupload ";
 import CustomTable from "../components/table";
 import CsvDownload from "../components/csvdownload";
+import D3Charts from "../components/chart";
 import Users from "./users";
 import { Condition } from "../components/Condition";
 import AccessDenied from "../components/accessdenied";
@@ -119,7 +120,7 @@ const Dashboard = () => {
                   <Users />
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={6}>
-                  Visualisations
+                  <D3Charts />
                 </CustomTabPanel>
               </Grid>
             </Grid>

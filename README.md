@@ -77,7 +77,7 @@ Features implemented
 
 #Routing in react and node proper or basic implementation
 
-Blocklist Ip address
+#Blocklist Ip address
 
 AWS setup with code repo or jenkins setup to run the application to view in web
 
