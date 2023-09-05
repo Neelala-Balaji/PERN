@@ -79,13 +79,13 @@ Features implemented
 
 #Blocklist Ip address
 
+#Visualizations -- added bar chart with static, local json, fetching from API(dynamic data).
+
 AWS setup with code repo or jenkins setup to run the application to view in web
 
 Code refactoring or best standards
 
 Multi Language transaltion any language to english
-
-Visualizations
 
 Chatbot app
 
