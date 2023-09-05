@@ -1,9 +1,9 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { GlobalContext, initialState } from "../context";
-import { Navigate } from "react-router-dom";
+import { redirect } from "react-router-dom";
 
 const Profile = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -17,14 +17,14 @@ const Profile = () => {
   };
 
   const handleLogout = () => {
-    sessionStorage.clear();
-    setGlobalState((ps) => ({
-      ...initialState,
-      isLoading: false,
-      isAuth: false,
-    }));
     setAnchorEl(null);
-    Navigate("/");
+    setGlobalState((ps) => ({
+      ...ps,
+      isAuth: false,
+      profile: { username: "" },
+    }));
+    sessionStorage.clear();
+    redirect(`/`);
   };
 
   return (

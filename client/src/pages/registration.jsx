@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
-import axios from "axios";
+import axiosInstance from "../axios";
 import BasicModal from "../shared/modal";
 import Button from "@mui/material/Button";
 
@@ -19,8 +19,8 @@ const Registration = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios
-      .post(`http://localhost:5000/api/insertusers`, formData)
+    axiosInstance
+      .post(`/insertusers`, formData)
       .then((response) => {
         console.log(response.data);
         resetFormData();

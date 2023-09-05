@@ -1,10 +1,10 @@
 import React from "react";
-import axios from "axios";
+import axiosInstance from "../axios";
 
 const CsvDownload = () => {
   const csvDownload = async () => {
-    axios
-      .get(`http://localhost:5000/api/csvdownload`)
+    axiosInstance
+      .get(`/csvdownload`)
       .then((response) => {
         console.log(response.data);
         if (response.data?.length) handleDownload(response.data);

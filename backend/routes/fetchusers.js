@@ -8,7 +8,7 @@ const createDBPool = require("../dbconn");
 const dbPool = createDBPool();
 const authenticateToken = require("../authenticateToken"); // Import the middleware
 
-// Define route handler for /api/users
+// Define route handler for /users
 router.get("/", authenticateToken, (req, res) => {
   // Implement your logic to fetch users from the database or any other data source
   const { username } = req.user;

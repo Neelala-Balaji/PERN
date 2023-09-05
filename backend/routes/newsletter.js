@@ -7,7 +7,7 @@ const sendEmail = require("../nodemailconn");
 // Create a database pool using the function
 const dbPool = createDBPool();
 
-// Define route handler for /api/users
+// Define route handler for /users
 router.post("/", (req, res) => {
   // Implement your logic to fetch users from the database or any other data source
   const { email } = req.body;

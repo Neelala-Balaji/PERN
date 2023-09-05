@@ -12,7 +12,7 @@ const dbPool = createDBPool();
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-// Define route handler for /api/csvupload
+// Define route handler for /csvupload
 router.post("/", upload.single("csv"), (req, res) => {
   if (!req.file) {
     return res.status(400).send("No file uploaded.");

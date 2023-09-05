@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Grid from "@mui/material/Grid";
-import axios from "axios";
 import BasicModal from "../shared/modal";
-import axiosInstance from "../services/axios";
+import axiosInstance from "../axios";
 
 const Users = () => {
   const [data, setData] = useState([]);
@@ -23,8 +22,8 @@ const Users = () => {
     event.preventDefault();
     // Send the insert query to the backend
 
-    axios
-      .post(`http://localhost:5000/api/updateusers`, formData)
+    axiosInstance
+      .post(`/updateusers`, formData)
       .then((response) => {
         console.log(response.data);
         loadregisterUsers();
@@ -43,7 +42,7 @@ const Users = () => {
 
   const loadregisterUsers = () => {
     axiosInstance
-      .get("http://localhost:5000/api/getusers")
+      .get("/getusers")
       .then((response) => {
         setData(response.data);
       })
@@ -59,8 +58,8 @@ const Users = () => {
 
   const deleteRow = (event, formData) => {
     event.preventDefault();
-    axios
-      .delete(`http://localhost:5000/api/deleteusers/${formData.id}`)
+    axiosInstance
+      .delete(`/deleteusers/${formData.id}`)
       .then((response) => {
         console.log(response.data);
         loadregisterUsers();

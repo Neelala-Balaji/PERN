@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axiosInstance from "../axios";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Table from "@mui/material/Table";
@@ -90,8 +90,8 @@ export default function CustomTable() {
   }, [page]);
 
   const loadTableData = () => {
-    axios
-      .post("http://localhost:5000/api/states", {
+    axiosInstance
+      .post("/states", {
         pageSize: rowsPerPage,
         page,
       })

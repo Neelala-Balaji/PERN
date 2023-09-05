@@ -41,27 +41,27 @@ const loginRoute = require("./routes/loginuser");
 const protectedRoute = require("./routes/validtoken");
 
 // Use the route handlers for the respective routes
-app.use("/api/insertusers", postsRoute);
+app.use("/insertusers", postsRoute);
 
-app.use("/api/getusers", usersRoute);
+app.use("/getusers", usersRoute);
 
-app.use("/api/updateusers", updateRoute);
+app.use("/updateusers", updateRoute);
 
-app.use("/api/deleteusers", deleteteRoute);
+app.use("/deleteusers", deleteteRoute);
 
-app.use("/api/newsletter", sendNewsletterRoute);
+app.use("/newsletter", sendNewsletterRoute);
 
-app.use("/api/fileUpload", fileUploadRoute);
+app.use("/fileUpload", fileUploadRoute);
 
-app.use("/api/csvupload", csvUploadRoute);
+app.use("/csvupload", csvUploadRoute);
 
-app.use("/api/csvdownload", csvDownloadRoute);
+app.use("/csvdownload", csvDownloadRoute);
 
-app.use("/api/states", stateRoute);
+app.use("/states", stateRoute);
 
-app.use("/api/login", loginRoute);
+app.use("/login", loginRoute);
 
-app.use("/api/protected", protectedRoute);
+app.use("/protected", protectedRoute);
 
 // Start the server
 app.listen(port, () => {

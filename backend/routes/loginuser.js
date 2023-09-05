@@ -9,7 +9,7 @@ const jwtConfig = require("../jwtconfig");
 // Create a database pool using the function
 const dbPool = createDBPool();
 
-// Define route handler for /api/users
+// Define route handler for /users
 router.post("/", (req, res) => {
   const { email, password } = req.body;
 

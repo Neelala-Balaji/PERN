@@ -7,7 +7,7 @@ const createDBPool = require("../dbconn");
 // Create a database pool using the function
 const dbPool = createDBPool();
 
-// Define route handler for /api/states
+// Define route handler for /states
 router.post("/", (req, res) => {
   // Implement your logic to fetch states from the database or any other data source
   const { pageSize, page } = req.body;

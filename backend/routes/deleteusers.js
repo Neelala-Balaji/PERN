@@ -6,7 +6,7 @@ const createDBPool = require("../dbconn");
 // Create a database pool using the function
 const dbPool = createDBPool();
 
-// DELETE /api/deleteusers/:id
+// DELETE /deleteusers/:id
 router.delete("/:id", async (req, res) => {
   const idToDelete = req.params.id;
 

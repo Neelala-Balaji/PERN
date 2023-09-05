@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import axios from "axios";
 import BasicModal from "../shared/modal";
 import Button from "@mui/material/Button";
 import { GlobalContext } from "../context";
+import axiosInstance from "../axios";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -19,8 +19,8 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios
-      .post(`http://localhost:5000/api/login`, formData)
+    axiosInstance
+      .post("/login", formData)
       .then((response) => {
         console.log(response.data);
         setGlobalState((prevData) => {

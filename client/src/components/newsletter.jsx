@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import axiosInstance from "../axios";
 
 export default function NewsLetter() {
   const [email, setEmail] = useState("");
@@ -12,8 +12,8 @@ export default function NewsLetter() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    axios
-      .post(`http://localhost:5000/api/newsletter`, { email })
+    axiosInstance
+      .post(`/newsletter`, { email })
       .then((response) => {
         console.log(response.data);
         // Handle successful response (e.g., show a success message)

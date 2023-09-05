@@ -13,7 +13,7 @@ import CsvDownload from "../components/csvdownload";
 import Users from "./users";
 import { Condition } from "../components/Condition";
 import AccessDenied from "../components/accessdenied";
-import axiosInstance from "../services/axios";
+import axiosInstance from "../axios";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -54,7 +54,7 @@ const Dashboard = () => {
     if (token) {
       // Use the instance for making authenticated requests
       axiosInstance
-        .get(`http://localhost:5000/api/protected`)
+        .get(`/protected`)
         .then((response) => {
           // Handle successful response
           console.log("validate", response);

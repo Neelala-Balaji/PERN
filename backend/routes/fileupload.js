@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-// Define route handler for /api/upload
+// Define route handler for /upload
 router.post("/", upload.single("file"), (req, res) => {
   // API endpoint for file upload
   res.json({ message: "File uploaded successfully" });
