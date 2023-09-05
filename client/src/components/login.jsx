@@ -46,9 +46,10 @@ const Login = () => {
 
   return (
     <div>
-      <Button onClick={() => setShowLogin(true)}>Log In</Button>
+      <Button onClick={() => setShowLogin(true)}>Sign In</Button>
       <BasicModal visible={showLogin} onClose={() => setShowLogin(false)}>
         <form onSubmit={handleSubmit}>
+          <h3>Sign In</h3>
           <div className="formcss">
             <input
               type="email"

@@ -42,7 +42,7 @@ const Registration = () => {
 
   return (
     <>
-      <Button onClick={() => setShowLogin(true)}>Registration</Button>
+      <Button onClick={() => setShowLogin(true)}>Sign Up</Button>
       <BasicModal visible={showLogin} onClose={() => setShowLogin(false)}>
         <Grid
           container
@@ -53,7 +53,7 @@ const Registration = () => {
           direction={"column"}
         >
           <Grid itexm xs={12}>
-            <h3>User Registration</h3>
+            <h3>Sign Up</h3>
             <form onSubmit={handleSubmit}>
               <div className="formcss">
                 <input
