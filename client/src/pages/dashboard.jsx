@@ -11,6 +11,7 @@ import CsvUpload from "../components/csvupload ";
 import CustomTable from "../components/table";
 import CsvDownload from "../components/csvdownload";
 import D3Charts from "../components/chart";
+import Translation from "../pages/translator";
 import Users from "./users";
 import { Condition } from "../components/Condition";
 import AccessDenied from "../components/accessdenied";
@@ -97,6 +98,7 @@ const Dashboard = () => {
                     <Tab label="Pagination with Table" {...a11yProps(4)} />
                     <Tab label="User Management" {...a11yProps(5)} />
                     <Tab label="D3 Charts" {...a11yProps(6)} />
+                    <Tab label="Translation" {...a11yProps(7)} />
                   </Tabs>
                 </Box>
               </Grid>
@@ -121,6 +123,9 @@ const Dashboard = () => {
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={6}>
                   <D3Charts />
+                </CustomTabPanel>
+                <CustomTabPanel value={value} index={7}>
+                  <Translation />
                 </CustomTabPanel>
               </Grid>
             </Grid>

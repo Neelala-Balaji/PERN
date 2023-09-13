@@ -164,3 +164,7 @@ li {
 .padding-20 {
   padding: 20px;
 }
+
+.noradius {
+  border-radius: 0px !important;
+}

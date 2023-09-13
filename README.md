@@ -81,11 +81,11 @@ Features implemented
 
 #Visualizations -- added bar chart with static, local json, fetching from API(dynamic data).
 
+#Multi Language transaltion any language to english -- setup the code and API but it is asking for paid libraries so basic concept I covered
+
 AWS setup with code repo or jenkins setup to run the application to view in web
 
 Code refactoring or best standards
-
-Multi Language transaltion any language to english
 
 Chatbot app
 

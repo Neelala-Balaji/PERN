@@ -53,6 +53,7 @@ const stateRoute = require("./routes/states");
 const loginRoute = require("./routes/loginuser");
 const protectedRoute = require("./routes/validtoken");
 const chartData = require("./routes/chart");
+const translateData = require("./routes/translate");
 
 // Use the route handlers for the respective routes
 app.use("/insertusers", postsRoute);
@@ -78,6 +79,8 @@ app.use("/login", loginRoute);
 app.use("/protected", protectedRoute);
 
 app.use("/chartdata", chartData);
+
+app.use("/translate", translateData);
 
 // Start the server
 app.listen(port, () => {

@@ -5,7 +5,7 @@ import jsonData from "../static/chart-data.json";
 
 const D3Charts = () => {
   //  static data for chart
-  const [data, setData] = useState([
+  const [data, ,] = useState([
     { label: "A", value: 10 },
     { label: "B", value: 20 },
     { label: "C", value: 15 },

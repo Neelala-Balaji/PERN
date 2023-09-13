@@ -20,21 +20,21 @@ const About = () => {
       <h2>Meet Our Team</h2>
       <ul>
         <li>
-          <strong>John Doe</strong> - CEO
+          <strong>Balaji Neelala</strong> - CEO
         </li>
         <li>
-          <strong>Jane Smith</strong> - CTO
+          <strong>Devi Neelala</strong> - CTO
         </li>
         <li>
-          <strong>Alice Johnson</strong> - CFO
+          <strong>Srinivasa Rao Neelala </strong> - CFO
         </li>
       </ul>
 
       <h2>Contact Us</h2>
       <p>
         If you have any questions or would like to get in touch with us, please
-        feel free to contact us at{" "}
-        <a href="mailto:info@example.com">info@example.com</a>.
+        feel free to contact us at
+        <a href="mailto:pern@example.com">: pern@example.com</a>.
       </p>
     </div>
   );
