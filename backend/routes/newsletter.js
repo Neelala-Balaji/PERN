@@ -20,7 +20,7 @@ router.post("/", (req, res) => {
       (err, result) => {
         if (err) {
           console.error("Error executing query:", err);
-          res.status(500).json({ error: "Error executing query" });
+          res.status(500).json({ error: "Email is already registered" });
         } else {
           res.json({ message: "News letter subscribed successfully" });
 
