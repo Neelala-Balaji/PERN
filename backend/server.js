@@ -82,6 +82,11 @@ app.use("/chartdata", chartData);
 
 app.use("/translate", translateData);
 
+// Define a route handler for GET requests to '/'
+app.get("/", (req, res) => {
+  res.send("node APIs are running");
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
